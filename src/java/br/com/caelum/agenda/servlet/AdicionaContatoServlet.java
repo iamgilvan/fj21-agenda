@@ -2,6 +2,7 @@ package br.com.caelum.agenda.servlet;
 
 import br.com.caelum.jdbc.dao.ContatoDAO;
 import br.com.caelum.jdbc.modelo.Contato;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
@@ -66,7 +67,7 @@ public class AdicionaContatoServlet extends HttpServlet {
             out.println("<title>Servlet AdiconaContatoServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("Contato " + contato.getNome() + " adicionado com sucesso ");
+            out.println("Contato  adicionado com sucesso ");
             out.println("</body>");
             out.println("</html>");
         }
