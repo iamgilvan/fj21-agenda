@@ -1,7 +1,7 @@
 package br.com.caelum.agenda.servlet;
 
-import br.com.caelum.jdbc.dao.ContatoDAO;
-import br.com.caelum.jdbc.modelo.Contato;
+import br.com.caelum.agenda.dao.ContatoDAO;
+import br.com.caelum.agenda.modelo.Contato;
 
 import java.io.IOException;
 import java.io.PrintWriter;

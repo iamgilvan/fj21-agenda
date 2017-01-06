@@ -4,9 +4,9 @@
     Author     : gilvan
 --%>
 
-<%@page import="br.com.caelum.jdbc.modelo.Contato"%>
-<%@page import="java.util.List"%>
-<%@page import="br.com.caelum.jdbc.dao.ContatoDAO"%>
+<%@page import="br.com.caelum.jdbc.modelo.*"%>
+<%@page import="java.util.*"%>
+<%@page import="br.com.caelum.jdbc.dao.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,14 +21,14 @@
             List<Contato> contatos = dao.getLista();
             for (Contato contato : contatos) {
             %>
-            <tr>
-                <td><%=contato.getNome() %></td>
-                <td><%=contato.getEmail() %></td>
-                <td><%=contato.getEndereco() %></td>
-                <td><%=contato.getDataNascimento().getTime() %></td>
-            </tr>
+                <tr>
+                    <td><%=contato.getNome() %></td>
+                    <td><%=contato.getEmail() %></td>
+                    <td><%=contato.getEndereco() %></td>
+                    <td><%=contato.getDataNascimento().getTime() %></td>
+                </tr>
             <%
-                }
+            }
             %>
         </table>
             
