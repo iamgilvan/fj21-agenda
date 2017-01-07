@@ -15,6 +15,19 @@
     </head>
     <body>
         <!-- cria o DAO-->
-        <jsp:useBean id="dao" class="br.com.caelum.agenda.d"
+        <jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDAO"/>
+        
+        <table>
+            <!-- percorre contato usando as linahs da tebala -->
+            <c:forEach var="contato" items="${dao.lista}">
+                <tr>
+                    <td>${contato.nome}</td>
+                    <td>${contato.email}</td>
+                    <td>${contato.endereco}</td>
+                    <td>${contato.dataNascimento.time}</td>
+                </tr>
+            </c:forEach>
+        </table>
+                    
     </body>
 </html>

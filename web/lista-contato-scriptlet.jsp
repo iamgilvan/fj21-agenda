@@ -4,9 +4,9 @@
     Author     : gilvan
 --%>
 
-<%@page import="br.com.caelum.jdbc.modelo.*"%>
+<%@page import="br.com.caelum.agenda.modelo.Contato"%>
+<%@page import="br.com.caelum.agenda.dao.ContatoDAO"%>
 <%@page import="java.util.*"%>
-<%@page import="br.com.caelum.jdbc.dao.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

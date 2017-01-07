@@ -36,7 +36,7 @@ public class AdicionaContatoServlet extends HttpServlet {
             String nome = request.getParameter("nome");
             String endereco = request.getParameter("endereco");
             String email = request.getParameter("email");
-            String dataEmTexto = request.getParameter("dataNascimento");
+            /*String dataEmTexto = request.getParameter("dataNascimento");
             Calendar dataNascimento = null;
             
             // Coonvertendo a data
@@ -47,14 +47,14 @@ public class AdicionaContatoServlet extends HttpServlet {
             } catch (ParseException e) {
                 out.println("Erro de conversão da data");
                 return;// para a execução método
-            }
+            }*/
             
             //motando um objeto contato
             Contato contato = new Contato();
             contato.setNome(nome);
             contato.setEndereco(endereco);
             contato.setEmail(email);
-            contato.setDataNascimento(dataNascimento);
+            //contato.setDataNascimento(dataNascimento);
             
             //salva o contato
             ContatoDAO dao = new ContatoDAO();
@@ -67,7 +67,7 @@ public class AdicionaContatoServlet extends HttpServlet {
             out.println("<title>Servlet AdiconaContatoServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("Contato  adicionado com sucesso ");
+            out.println("Contato " + contato.getNome() +" adicionado com sucesso ");
             out.println("</body>");
             out.println("</html>");
         }
