@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -59,9 +60,12 @@ public class AdicionaContatoServlet extends HttpServlet {
             //salva o contato
             ContatoDAO dao = new ContatoDAO();
             
+            RequestDispatcher rd = request.getRequestDispatcher("/contato-adicionado.jsp");
+            rd.forward(request, response);
+            
             //imprime o nome do contato que foi adicionado
             
-            out.println("<!DOCTYPE html>");
+            /*out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet AdiconaContatoServlet</title>");            
@@ -69,7 +73,7 @@ public class AdicionaContatoServlet extends HttpServlet {
             out.println("<body>");
             out.println("Contato " + contato.getNome() +" adicionado com sucesso ");
             out.println("</body>");
-            out.println("</html>");
+            out.println("</html>");*/
         }
     }
 
