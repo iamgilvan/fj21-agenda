@@ -14,7 +14,9 @@
         <title>Lista de contatos elegante</title>
     </head>
     <body>
-        <!-- cria o DAO-->
+        <c:import url="cabecalho.jsp" />
+        
+        <!-- cria a lista dao-->
         <jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDAO"/>
         
         <table>
@@ -36,6 +38,7 @@
                 </tr>
             </c:forEach>
         </table>
+        <c:import url="rodape.jsp" />
                     
     </body>
 </html>
