@@ -34,7 +34,7 @@ public class ControllerServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             String parametro = request.getParameter("logica");
-            String nomeDaClasse = "br.com.caelum.mvc.logica" + parametro;
+            String nomeDaClasse = "br.com.caelum.mvc.logica." + parametro;
             
             try {
                 Class classe = Class.forName(nomeDaClasse);

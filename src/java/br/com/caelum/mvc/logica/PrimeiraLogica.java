@@ -19,7 +19,7 @@ public class PrimeiraLogica implements Logica{
     public void executa(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
         System.out.println("Aplicando a lógia e redirecionando...");
         
-        RequestDispatcher rd = req.getRequestDispatcher("primeira-logica.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/primeira-logica.jsp");
         rd.forward(req, res);
         
     }
