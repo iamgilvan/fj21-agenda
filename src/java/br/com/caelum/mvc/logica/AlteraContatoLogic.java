@@ -7,6 +7,7 @@ package br.com.caelum.mvc.logica;
 
 import br.com.caelum.agenda.dao.ContatoDAO;
 import br.com.caelum.agenda.modelo.Contato;
+import java.sql.Connection;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -39,8 +40,11 @@ public class AlteraContatoLogic implements Logica
         dataNascimento.setTime(date);
         
         contato.setDataNascimento(dataNascimento);
+        //busca a conexão pendurada na requisição
+        Connection connection = (Connection) req.getAttribute("conexao");
         
-        ContatoDAO dao = new ContatoDAO();
+        // passe a conexão no construtor
+        ContatoDAO dao = new ContatoDAO(connection);
         dao.altera(contato);
         
         RequestDispatcher rd = req.getRequestDispatcher("/lista-contatos-elegante.jsp");
